@@ -1,0 +1,31 @@
+import React, { useState } from "react";
+import { Switch, Grid, Typography, Button, Paper } from "@material-ui/core";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+
+const App = () => {
+  const [darkMode, setDarkMore] = useState(false);
+
+  const theme = createTheme({
+    palette: {
+      type: darkMode ? "dark" : "light",
+    },
+  });
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Paper style={{ height: "100vh" }}>
+        <Grid container direction={"column"}>
+          <div>
+            <Typography variant="h1"> Text Text Text</Typography>
+          </div>
+          <Button variant="contained" color="secondary">
+            Click Me!
+          </Button>
+          <Switch checked={darkMode} onChange={() => setDarkMore(!darkMode)} />
+        </Grid>
+      </Paper>
+    </ThemeProvider>
+  );
+};
+
+export default App;
