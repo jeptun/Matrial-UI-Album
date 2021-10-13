@@ -6,7 +6,7 @@
 <div align="center">
  
 
-  <h3 align="center">React-Tunes</h3>
+  <h3 align="center">Matrial-UI Album</h3>
 
   <p align="center">
     Test Material-UI knihovny. 
